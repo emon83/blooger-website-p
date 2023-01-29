@@ -1,0 +1,139 @@
+/*------Import fonts--------*/
+@import url('../css/font.css');
+
+
+/*------- Variable define --------*/
+:root {
+    /* theme font-family */
+    --font-Abel: Abel;
+    --font-Anton: Anton;
+    --font-josefin: josefin;
+    --font-Lexend: Lexend;
+    --font-Livvic: Livvic;
+
+    /* theme color */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color */
+    --sky-gradient: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+
+/*------- common style --------*/
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+/*------- Global style ---------*/
+a {
+  text-decoration: none;
+  color: var(--text-gray);
+}
+
+.flex__row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*------- navbar section -------*/
+.nav {
+  background-color: white;
+  padding: 0.2rem;
+  height: 0rem;
+  min-height: 10vh;
+  overflow: hidden;
+}
+
+.nav .nav__menu {
+  justify-content: space-between;
+}
+
+.nav .toggle__collapse {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle__collapse .toggle__icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle__collapse .toggle__icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 20rem;
+}
+
+.nav .nav__items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav__items .nav__link {
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--font-Abel);
+}
+
+.nav .nav__items .nav__link:hover {
+    background-color: var(--midnight);
+}
+
+.nav .nav__items .nav__link:hover a{
+    color: var(--white);
+}
+
+.nav .nav__brand a {
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: block;
+  font-family: var(--font-Lexend), cursive;
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .social i {
+    padding: 0 0.2rem;
+}
+
+.nav .social i:hover {
+   color: #a1c4fd;
+}
+
+
+
+
+/*------- Responsive for mobile --------*/
+@media only screen and (max-width:750px) {
+    .nav .nav__menu, .nav .nav__items{
+       flex-direction: column;
+    }
+
+    .nav .toggle__collapse {
+        display: initial;
+    }
+}
